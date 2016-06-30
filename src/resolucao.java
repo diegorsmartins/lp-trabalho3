@@ -106,12 +106,13 @@ public class resolucao {
 	 *            valor digitado pelo usuario
 	 */
 	public static void imprimeTabela(double[] a, String[] b, double[] c, double[] d) {
-		System.out.println("| Código    | Descrição | Preço     | Quantidade");
+		System.out.println("\tTABELA DE PRODUTOS");
+		System.out.println("Código\tDescrição\tPreço\tQuantidade");
 
 		int i;
 
 		for (i = 0; i < a.length; i++) {
-			System.out.println("  " + a[i] + "         " + b[i] + "         " + c[i] + "         " + d[i]);
+			System.out.println(a[i] + "\t" + b[i] + "\t\t" + c[i] + "\t" + d[i]);
 		}
 	}
 
@@ -132,13 +133,14 @@ public class resolucao {
 
 		int p, cont = 0, i;
 
+		System.out.println("\tPESQUISA DE PRODUTO");
 		System.out.print("Digite o código do produto desejado: ");
 		p = sc.nextInt();
 
 		for (i = 0; i < a.length; i++) {
 			if (p == a[i]) {
 				System.out.println("Código\tDescrição\tPreço\tQuantidade\tPreçoXqtd");
-				System.out.println(a[i] + "\t" + b[i] + "\t" + c[i] + "\t" + d[i] + "\t" + (c[i] * d[i]));
+				System.out.println(a[i] + "\t" + b[i] + "\t\t" + c[i] + "\t" + d[i] + "\t\t" + (c[i] * d[i]));
 			} else if (p != a[i]) {
 				cont++;
 			}
@@ -171,8 +173,9 @@ public class resolucao {
 				cont2 = i;
 			}
 		}
+		System.out.println("\tPRODUTO MAIS CARO");
 		System.out.println("Código\tDescrição\tPreço\tQuantidade");
-		System.out.println(a[cont2] + "\t" + b[cont2] + "\t" + c[cont2] + "\t" + d[cont2]);
+		System.out.println(a[cont2] + "\t" + b[cont2] + "\t\t" + c[cont2] + "\t" + d[cont2]);
 	}
 
 	/**
@@ -186,11 +189,11 @@ public class resolucao {
 	 *            estoque do produto (para comparação)
 	 */
 	public static void menorQ10(double a[], String b[], double d[]) {
-		System.out.println("Produtos com estoque abaixo de 10");
-		System.out.println("| Código    | Descrição");
+		System.out.println("\tPRODUTOS COM ESTOQUE < 10");
+		System.out.println("Código\tDescrição");
 		for (int i = 0; i < a.length; i++) {
 			if (d[i] < 10) {
-				System.out.println("  " + a[i] + "         " + b[i]);
+				System.out.println(a[i] + "\t" + b[i]);
 			}
 		}
 	}
@@ -218,7 +221,7 @@ public class resolucao {
 			soma = c[i] * d[i];
 			ativo = ativo + soma;
 		}
-		System.out.println(ativo);
+		System.out.printf("%.2f\n", ativo);
 	}
 
 	/**
@@ -235,6 +238,8 @@ public class resolucao {
 		Scanner sc = new Scanner(System.in);
 
 		int i,p, qtdVenda, cont = 0;
+		
+		System.out.println("\tVENDA");
 		System.out.print("Digite o código do produto: ");
 		p=sc.nextInt();
 		for (i = 0; i < a.length; i++) {
@@ -242,7 +247,7 @@ public class resolucao {
 				System.out.print("Qual a quantidade do produto: ");
 				qtdVenda = sc.nextInt();
 				if (d[i] - qtdVenda < 0){
-					System.out.println("Quantidade insuficiente");
+					System.out.println("Quantidade insuficiente.");
 				} else {
 					d[i] = d[i] - qtdVenda;
 					System.out.println("Venda realizada com sucesso!");
@@ -253,7 +258,7 @@ public class resolucao {
 		}
 		
 		if (cont == a.length) {
-			System.out.println("Código inexistente");
+			System.out.println("Código inexistente.");
 		}
 	}
 }
