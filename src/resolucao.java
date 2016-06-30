@@ -50,14 +50,10 @@ public class resolucao {
 	/**
 	 * pega os dados da tabela de produtos
 	 * 
-	 * @param a
-	 *            vetor do código do produto
-	 * @param b
-	 *            vetor da descrição do produto
-	 * @param c
-	 *            vetor do preço do produto
-	 * @param d
-	 *            vetor da quantidade do produto
+	 * @param a vetor do código do produto
+	 * @param b vetor da descrição do produto
+	 * @param c vetor do preço do produto
+	 * @param d vetor da quantidade do produto
 	 */
 	public static void tabelaProdutos(double a[], String b[], double c[], double d[]) {
 		Scanner sc = new Scanner(System.in);
@@ -94,16 +90,11 @@ public class resolucao {
 	/**
 	 * imprime a tabela dos produtos digitados pelo usuário opçao 1
 	 * 
-	 * @param a
-	 *            código do produto
-	 * @param b
-	 *            descrição do produto
-	 * @param c
-	 *            preço do produto
-	 * @param d
-	 *            estoque do produto
-	 * @param N
-	 *            valor digitado pelo usuario
+	 * @param a código do produto
+	 * @param b descrição do produto
+	 * @param c preço do produto
+	 * @param d estoque do produto
+	 * @param N valor digitado pelo usuario
 	 */
 	public static void imprimeTabela(double[] a, String[] b, double[] c, double[] d) {
 		System.out.println("\tTABELA DE PRODUTOS");
@@ -119,14 +110,10 @@ public class resolucao {
 	/**
 	 * pesquisa de produto por código opção 2
 	 * 
-	 * @param a
-	 *            imprime o código do produto
-	 * @param b
-	 *            imprime a descrição do produto
-	 * @param c
-	 *            imprime o preço do produto
-	 * @param d
-	 *            imprime o estoque do produto
+	 * @param a imprime o código do produto
+	 * @param b imprime a descrição do produto
+	 * @param c imprime o preço do produto
+	 * @param d imprime o estoque do produto
 	 */
 	public static void pesquisaProduto(double a[], String b[], double c[], double d[]) {
 		Scanner sc = new Scanner(System.in);
@@ -153,14 +140,10 @@ public class resolucao {
 	/**
 	 * imprime o produto mais caro opção 3
 	 * 
-	 * @param a
-	 *            imprime o código do produto
-	 * @param b
-	 *            imprime a descrição do produto
-	 * @param c
-	 *            imprime o preço do produto
-	 * @param d
-	 *            imprime o estoque do produto
+	 * @param a imprime o código do produto
+	 * @param b imprime a descrição do produto
+	 * @param c imprime o preço do produto
+	 * @param d imprime o estoque do produto
 	 */
 	public static void maiorPreco(double a[], String b[], double c[], double d[]) {
 
@@ -181,12 +164,9 @@ public class resolucao {
 	/**
 	 * imprime lista de produtos que estão com estoque abaixo de 10 opção 4
 	 * 
-	 * @param a
-	 *            código do produto
-	 * @param b
-	 *            descrição do produto
-	 * @param d
-	 *            estoque do produto (para comparação)
+	 * @param a código do produto
+	 * @param b descrição do produto
+	 * @param d estoque do produto (para comparação)
 	 */
 	public static void menorQ10(double a[], String b[], double d[]) {
 		System.out.println("\tPRODUTOS COM ESTOQUE < 10");
@@ -201,10 +181,8 @@ public class resolucao {
 	/**
 	 * imprime o ativo total do estoque opção 5
 	 * 
-	 * @param c
-	 *            preço do produto
-	 * @param d
-	 *            estoque do produto
+	 * @param c preço do produto
+	 * @param d estoque do produto
 	 */
 	public static void ativoEstoque(double c[], double d[]) {
 
@@ -227,12 +205,9 @@ public class resolucao {
 	/**
 	 * efetua a venda do produto opção 6
 	 * 
-	 * @param a
-	 *            código do produto
-	 * @param c
-	 *            preço do produto
-	 * @param d
-	 *            estoque do produto
+	 * @param a código do produto
+	 * @param c preço do produto
+	 * @param d estoque do produto
 	 */
 	public static void venda(double a[], double c[], double d[]) {
 		Scanner sc = new Scanner(System.in);
